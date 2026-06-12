@@ -45,7 +45,10 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-2">
           <p className="text-white/25 text-xs">© {new Date().getFullYear()} N.N. Pawar Associates. All rights reserved.</p>
-          <p className="text-white/25 text-xs">Sadashiv Peth, Pune – 411 030, Maharashtra</p>
+          <div className="flex items-center gap-4">
+            <Link href="/privacy-policy" className="text-white/25 text-xs hover:text-accent transition-colors">Privacy Policy</Link>
+            <p className="text-white/25 text-xs">Sadashiv Peth, Pune – 411 030, Maharashtra</p>
+          </div>
         </div>
       </div>
     </footer>
