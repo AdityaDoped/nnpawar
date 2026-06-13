@@ -30,22 +30,24 @@ export default function Navbar() {
   const solidNav = scrolled || !isHome;
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${solidNav ? "bg-white/95 backdrop-blur-sm shadow-sm py-3" : "bg-transparent py-6"}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${solidNav ? "bg-white/97 backdrop-blur-md shadow-md py-3" : "bg-transparent py-5"}`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative w-10 h-10 shrink-0">
-            <Image src="/logo.png" alt="N.N. Pawar Associates" fill className="object-contain" />
+        {/* LOGO + BRAND */}
+        <Link href="/" className="flex items-center gap-4 group">
+          <div className="relative w-16 h-16 shrink-0">
+            <Image src="/logo.png" alt="N.N. Pawar &amp; Associates" fill className="object-contain" />
           </div>
           <div className="leading-tight">
-            <p className={`font-serif font-semibold text-sm tracking-wide transition-colors duration-300 ${solidNav ? "text-primary" : "text-white"}`}>
-              N.N. Pawar Associates
+            <p className={`font-serif font-bold text-lg tracking-wide transition-colors duration-300 ${solidNav ? "text-primary" : "text-white"}`}>
+              N.N. Pawar <span className="text-accent">&amp;</span> Associates
             </p>
-            <p className={`text-[10px] tracking-widest uppercase transition-colors duration-300 ${solidNav ? "text-muted" : "text-white/60"}`}>
-              Architect & Consultant
+            <p className={`text-[10px] tracking-[0.22em] uppercase transition-colors duration-300 ${solidNav ? "text-muted" : "text-white/60"}`}>
+              Design &bull; Consultancy &bull; Execution
             </p>
           </div>
         </Link>
 
+        {/* DESKTOP NAV */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href}
@@ -66,12 +68,14 @@ export default function Navbar() {
           </Link>
         </nav>
 
+        {/* MOBILE TOGGLE */}
         <button className={`md:hidden transition-colors duration-300 ${solidNav ? "text-primary" : "text-white"}`}
           onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation">
-          {menuOpen ? <X size={22} /> : <Menu size={22} />}
+          {menuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
+      {/* MOBILE MENU */}
       <div className={`md:hidden bg-white overflow-hidden transition-all duration-300 ${menuOpen ? "max-h-96 border-t border-gray-100" : "max-h-0"}`}>
         <nav className="flex flex-col px-6 py-5 gap-4">
           {navLinks.map((link) => (

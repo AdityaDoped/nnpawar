@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 
 export const metadata = {
-  title: "About | N.N. Pawar Associates",
+  title: "About | N.N. Pawar & Associates",
   description: "Meet Narsing N. Pawar — 25+ years of architectural and engineering excellence in Pune.",
 };
 
@@ -60,7 +60,7 @@ export default function AboutPage() {
       </section>
 
       <section className="max-w-7xl mx-auto px-6 py-20">
-        <SectionHeading label="Our Values" title="What Drives Us" centered subtitle="Three principles guide everything we do at N.N. Pawar Associates." />
+        <SectionHeading label="Our Values" title="What Drives Us" centered subtitle="Three principles guide everything we do at N.N. Pawar & Associates." />
         <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             { icon: "◈", title: "Design Excellence", desc: "We pursue beauty and functionality in equal measure. Every elevation, every floor plan is refined until it meets our exacting standards." },

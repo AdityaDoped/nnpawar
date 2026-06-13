@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 
 export const metadata = {
-  title: "Services | N.N. Pawar Associates",
+  title: "Services | N.N. Pawar & Associates",
   description: "Architectural design, licensed engineering, project consultation and interior planning services in Pune.",
 };
 

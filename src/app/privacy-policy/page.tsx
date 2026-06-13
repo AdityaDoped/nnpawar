@@ -2,9 +2,9 @@ import Link from "next/link";
 import { ArrowRight, Shield, Eye, Cookie, Mail } from "lucide-react";
 
 export const metadata = {
-  title: "Privacy Policy | N.N. Pawar Associates",
+  title: "Privacy Policy | N.N. Pawar & Associates",
   description:
-    "Privacy Policy for N.N. Pawar Associates — how we handle your information on our architecture and consultancy website.",
+    "Privacy Policy for N.N. Pawar & Associates — how we handle your information on our architecture and consultancy website.",
 };
 
 const sections = [
@@ -79,7 +79,7 @@ export default function PrivacyPolicyPage() {
       <section className="bg-primary">
         <div className="max-w-7xl mx-auto px-6 py-10">
           <p className="text-white/60 text-sm leading-relaxed max-w-3xl">
-            N.N. Pawar Associates (&ldquo;we&rdquo;, &ldquo;our&rdquo;,
+            N.N. Pawar & Associates (&ldquo;we&rdquo;, &ldquo;our&rdquo;,
             &ldquo;us&rdquo;) operates the website at{" "}
             <span className="text-accent">nnpawarassociates.com</span>. This
             page informs you of our policies regarding the collection, use, and

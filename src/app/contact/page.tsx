@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { MapPin, Phone, Mail, Send, AlertCircle } from "lucide-react";
+import { MapPin, Phone, Mail, Send, AlertCircle, Facebook } from "lucide-react";
 
 interface FormError {
   name?: string;
@@ -60,7 +60,7 @@ export default function ContactPage() {
     }
 
     setIsLoading(true);
-    const msg = encodeURIComponent(`Hello N.N. Pawar Associates,\n\nName: ${form.name}\nPhone: ${form.phone}\nEmail: ${form.email}\nProject Type: ${form.projectType}\n\nMessage: ${form.message}`);
+    const msg = encodeURIComponent(`Hello N.N. Pawar & Associates,\n\nName: ${form.name}\nPhone: ${form.phone}\nEmail: ${form.email}\nProject Type: ${form.projectType}\n\nMessage: ${form.message}`);
     window.open(`https://wa.me/919422322195?text=${msg}`, "_blank");
     
     setTimeout(() => {
@@ -105,7 +105,15 @@ export default function ContactPage() {
               <div className="w-10 h-10 bg-secondary flex items-center justify-center shrink-0"><Mail size={16} className="text-accent" /></div>
               <div>
                 <p className="text-[9px] text-muted/50 tracking-widest uppercase mb-1">Email</p>
-                <a href="mailto:narsingpawar@yahoo.com" className="text-sm text-primary hover:text-accent transition-colors">narsingpawar@yahoo.com</a>
+                <a href="mailto:narsingpawar@yahoo.com" className="text-sm text-primary hover:text-accent transition-colors block">narsingpawar@yahoo.com</a>
+                <a href="mailto:narsingnpawar@gmail.com" className="text-sm text-primary hover:text-accent transition-colors block mt-0.5">narsingnpawar@gmail.com</a>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 bg-secondary flex items-center justify-center shrink-0"><Facebook size={16} className="text-accent" /></div>
+              <div>
+                <p className="text-[9px] text-muted/50 tracking-widest uppercase mb-1">Facebook</p>
+                <a href="https://www.facebook.com/narsing.pawar.12" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:text-accent transition-colors">N.N. Pawar &amp; Associates</a>
               </div>
             </div>
           </div>
@@ -116,13 +124,27 @@ export default function ContactPage() {
             </svg>
             Chat on WhatsApp
           </a>
-          <div className="w-full h-52 bg-secondary border border-gray-100 flex items-center justify-center">
-            <a href="https://maps.google.com/?q=Sadashiv+Peth+Pune+411030" target="_blank" rel="noopener noreferrer"
-              className="flex flex-col items-center gap-2 text-muted hover:text-accent transition-colors">
-              <MapPin size={24} />
-              <span className="text-xs tracking-wider uppercase">Open in Google Maps</span>
-            </a>
+          {/* REAL GOOGLE MAPS EMBED */}
+          <div className="w-full h-64 border border-gray-100 overflow-hidden rounded-sm mt-2">
+            <iframe
+              src="https://www.google.com/maps?q=Amrapali,+988+Sadashiv+Peth,+Pune+411030,+Maharashtra&output=embed&z=17"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="N.N. Pawar &amp; Associates — Office Location"
+            />
           </div>
+          <a
+            href="https://maps.app.goo.gl/6yKaCcKGR1YiRdm79"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-[10px] tracking-widest uppercase text-primary border-b border-primary pb-0.5 hover:text-accent hover:border-accent transition-colors mt-3"
+          >
+            <MapPin size={12} /> Open Exact Location in Google Maps
+          </a>
         </div>
 
         <div>
