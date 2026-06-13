@@ -34,14 +34,14 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* LOGO + BRAND */}
         <Link href="/" className="flex items-center gap-4 group">
-          <div className="relative w-16 h-16 shrink-0">
+          <div className="relative w-14 h-14 md:w-20 md:h-20 shrink-0">
             <Image src="/logo.png" alt="N.N. Pawar &amp; Associates" fill className="object-contain" />
           </div>
           <div className="leading-tight">
-            <p className={`font-serif font-bold text-lg tracking-wide transition-colors duration-300 ${solidNav ? "text-primary" : "text-white"}`}>
+            <p className={`font-serif font-bold text-base md:text-xl lg:text-2xl tracking-wide transition-colors duration-300 ${solidNav ? "text-primary" : "text-white"}`}>
               N.N. Pawar <span className="text-accent">&amp;</span> Associates
             </p>
-            <p className={`text-[10px] tracking-[0.22em] uppercase transition-colors duration-300 ${solidNav ? "text-muted" : "text-white/60"}`}>
+            <p className={`text-[9px] md:text-[11px] tracking-[0.22em] uppercase transition-colors duration-300 ${solidNav ? "text-muted" : "text-white/60"}`}>
               Design &bull; Consultancy &bull; Execution
             </p>
           </div>
