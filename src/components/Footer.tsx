@@ -11,7 +11,7 @@ export default function Footer() {
             N.N. Pawar <span className="text-accent">&amp;</span> Associates
           </p>
           <p className="text-white/40 text-[10px] tracking-widest uppercase mb-6">
-            License Engineer &amp; Architectural Consultant
+            Licensed Engineer &amp; Architectural Consultant
           </p>
           <p className="text-white/55 text-sm leading-relaxed">
             Over 25 years of crafting spaces that inspire — from intimate residences to large-scale commercial complexes across Maharashtra.

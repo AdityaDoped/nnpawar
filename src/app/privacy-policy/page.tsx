@@ -81,7 +81,7 @@ export default function PrivacyPolicyPage() {
           <p className="text-white/60 text-sm leading-relaxed max-w-3xl">
             N.N. Pawar & Associates (&ldquo;we&rdquo;, &ldquo;our&rdquo;,
             &ldquo;us&rdquo;) operates the website at{" "}
-            <span className="text-accent">nnpawarassociates.com</span>. This
+            <span className="text-accent">nnpawar.vercel.app</span>. This
             page informs you of our policies regarding the collection, use, and
             disclosure of personal data when you use our website and the choices
             you have associated with that data. We are committed to protecting

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { ArrowLeft, MapPin, Calendar, Tag } from "lucide-react";
 import { projects } from "@/data/projects";
 import ProjectGallery from "./ProjectGallery";
@@ -9,6 +10,17 @@ export async function generateStaticParams() {
   return projects.map((project) => ({
     slug: project.slug,
   }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
+  if (!project) return { title: "Project Not Found | N.N. Pawar & Associates" };
+  return {
+    title: `${project.title} | N.N. Pawar & Associates`,
+    description: project.description.slice(0, 155),
+    alternates: { canonical: `/projects/${slug}` },
+  };
 }
 
 export default async function ProjectDetailPage({ params }: { params: Promise<{ slug: string }> }) {

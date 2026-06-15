@@ -188,7 +188,7 @@ export default function HomePage() {
             subtitle="We are not just architects — we are licensed engineers who understand both the art and the science of building." />
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { num: "01", title: "Licensed Engineering", desc: "As a certified license engineer, we ensure every structure meets statutory norms, safety codes, and municipal approval requirements — saving you time and legal hassle." },
+              { num: "01", title: "Licensed Engineering", desc: "As a certified licensed engineer, we ensure every structure meets statutory norms, safety codes, and municipal approval requirements — saving you time and legal hassle." },
               { num: "02", title: "End-to-End Delivery", desc: "From initial concept sketches and site analysis to construction supervision and final handover, we manage the complete project lifecycle with precision and personal care." },
               { num: "03", title: "25+ Years of Expertise", desc: "Decades of hands-on experience across residential bungalows, apartment townships, and commercial complexes throughout Pune and Maharashtra." },
             ].map((item) => (

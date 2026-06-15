@@ -13,15 +13,15 @@ const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfa
 const SITE_URL = "https://nnpawar.vercel.app";
 
 export const metadata: Metadata = {
-  title: "N.N. Pawar & Associates | License Engineer & Architectural Consultant",
+  title: "N.N. Pawar & Associates | Licensed Engineer & Architectural Consultant",
   description: "25+ years of architectural excellence in Pune. Design, Consultancy and Execution by N.N. Pawar & Associates.",
-  keywords: "architect pune, architectural consultant pune, license engineer pune, building design pune, bungalow design pune, residential architect pune",
+  keywords: "architect pune, architectural consultant pune, licensed engineer pune, building design pune, bungalow design pune, residential architect pune",
   metadataBase: new URL(SITE_URL),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "N.N. Pawar & Associates | License Engineer & Architectural Consultant",
+    title: "N.N. Pawar & Associates | Licensed Engineer & Architectural Consultant",
     description: "25+ years of architectural excellence in Pune. Residential, Commercial & Township projects across Maharashtra.",
     url: SITE_URL,
     siteName: "N.N. Pawar & Associates",

@@ -38,7 +38,7 @@ export default function AboutPage() {
             <p>As a licensed engineer, Mr. Pawar brings a rare combination of architectural creativity and technical rigour to every engagement. He personally oversees each project from concept to completion.</p>
           </div>
           <div className="mt-8 grid grid-cols-2 gap-4">
-            {[{label:"License Engineer",value:"Certified"},{label:"Architectural Consultant",value:"Registered"},{label:"Based In",value:"Pune, MH"},{label:"Est.",value:"1999"}].map((item) => (
+            {[{label:"Licensed Engineer",value:"Certified"},{label:"Architectural Consultant",value:"Registered"},{label:"Based In",value:"Pune, MH"},{label:"Est.",value:"1999"}].map((item) => (
               <div key={item.label} className="border-l-2 border-accent pl-4">
                 <p className="text-[9px] text-muted/60 tracking-widest uppercase">{item.label}</p>
                 <p className="text-sm font-medium text-primary mt-0.5">{item.value}</p>
