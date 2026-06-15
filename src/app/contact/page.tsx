@@ -66,14 +66,14 @@ export default function ContactPage() {
           {/* REAL GOOGLE MAPS EMBED */}
           <div className="w-full h-64 border border-gray-100 overflow-hidden rounded-sm mt-2">
             <iframe
-              src="https://www.google.com/maps?q=Amrapali,+988+Sadashiv+Peth,+Pune+411030,+Maharashtra&output=embed&z=17"
+              src="https://www.google.com/maps?q=18.5118548,73.8468509&z=17&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="N.N. Pawar & Associates — Office Location"
+              title="N.N. Pawar & Associates — Office Location, Sadashiv Peth, Pune"
             />
           </div>
           <a href="https://maps.app.goo.gl/6yKaCcKGR1YiRdm79" target="_blank" rel="noopener noreferrer"
