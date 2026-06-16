@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { projects } from "@/data/projects";
 
 // ⚠️ Replace with your actual deployed domain
-const BASE_URL = "https://nnpawar.vercel.app";
+const BASE_URL = "https://nnpawarassociates.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [

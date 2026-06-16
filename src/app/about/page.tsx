@@ -4,8 +4,15 @@ import { ArrowRight } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 
 export const metadata = {
-  title: "About | N.N. Pawar & Associates",
-  description: "Meet Narsing N. Pawar — 25+ years of architectural and engineering excellence in Pune.",
+  title: "About Us | Architect & Licensed Engineer in Pune",
+  description:
+    "Meet Narsing N. Pawar — a licensed architect and engineer with 25+ years of experience in Pune. Trusted by hundreds of families and businesses across Maharashtra for residential, commercial, and township projects.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About N.N. Pawar & Associates | Architect in Pune",
+    description: "25+ years of architectural excellence in Pune. Licensed engineer. Personal project oversight from concept to completion.",
+    images: ["/images/vv7.jpeg"],
+  },
 };
 
 export default function AboutPage() {

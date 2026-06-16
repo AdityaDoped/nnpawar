@@ -4,8 +4,15 @@ import { ArrowRight } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 
 export const metadata = {
-  title: "Services | N.N. Pawar & Associates",
-  description: "Architectural design, licensed engineering, project consultation and interior planning services in Pune.",
+  title: "Services | Architectural Design & Engineering in Pune",
+  description:
+    "Architectural design, licensed structural engineering, building plan approvals (PMC/PMRDA), project consultation and interior space planning in Pune. Serving residential, commercial and township clients across Maharashtra.",
+  alternates: { canonical: "/services" },
+  openGraph: {
+    title: "Architectural Services in Pune | N.N. Pawar & Associates",
+    description: "Design, engineering, approvals and consultation — all under one roof in Pune.",
+    images: ["/images/bungalow2.jpeg"],
+  },
 };
 
 const services = [
