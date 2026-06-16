@@ -18,6 +18,12 @@ const config: Config = {
         accent: "#c8a96e",
         muted: "#6b7280",
       },
+      scale: {
+        "108": "1.08",
+      },
+      transitionDuration: {
+        "400": "400ms",
+      },
       animation: {
         "fade-in": "fadeIn 1s ease-in-out forwards",
         "slide-up": "slideUp 0.8s ease-out forwards",
