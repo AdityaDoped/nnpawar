@@ -17,7 +17,8 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
-  const isHome = pathname === "/";
+  const heroPages = ["/", "/projects"];
+  const isHeroPage = heroPages.includes(pathname);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60);
@@ -27,7 +28,7 @@ export default function Navbar() {
 
   useEffect(() => { setMenuOpen(false); }, [pathname]);
 
-  const solidNav = scrolled || !isHome;
+  const solidNav = scrolled || !isHeroPage;
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${solidNav ? "bg-white/97 backdrop-blur-md shadow-md py-3" : "bg-transparent py-5"}`}>
