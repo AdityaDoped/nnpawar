@@ -6,14 +6,13 @@ import { ArrowUpRight, MapPin } from "lucide-react";
 interface ProjectCardProps {
   project: Project;
   priority?: boolean;
+  /** If provided, clicking the card calls this instead of navigating */
+  onClick?: () => void;
 }
 
-export default function ProjectCard({ project, priority = false }: ProjectCardProps) {
+function CardInner({ project, priority = false }: { project: Project; priority?: boolean }) {
   return (
-    <Link
-      href={`/projects/${project.slug}`}
-      className="group relative block overflow-hidden bg-secondary"
-    >
+    <>
       {/* Image */}
       <div className="relative aspect-[4/3] overflow-hidden">
         <Image
@@ -52,7 +51,7 @@ export default function ProjectCard({ project, priority = false }: ProjectCardPr
               {project.shortDesc}
             </p>
             <div className="mt-3 flex items-center gap-1 text-[10px] tracking-wider uppercase text-accent">
-              <span>View Project</span>
+              <span>View Details</span>
               <ArrowUpRight size={11} />
             </div>
           </div>
@@ -77,10 +76,28 @@ export default function ProjectCard({ project, priority = false }: ProjectCardPr
           {project.shortDesc}
         </p>
         <div className="mt-4 flex items-center gap-1.5 text-xs tracking-wider uppercase text-primary/60">
-          <span>View Project</span>
+          <span>View Details</span>
           <ArrowUpRight size={12} />
         </div>
       </div>
+    </>
+  );
+}
+
+export default function ProjectCard({ project, priority = false, onClick }: ProjectCardProps) {
+  const cls = "group relative block overflow-hidden bg-secondary w-full text-left";
+
+  if (onClick) {
+    return (
+      <button onClick={onClick} className={cls}>
+        <CardInner project={project} priority={priority} />
+      </button>
+    );
+  }
+
+  return (
+    <Link href={`/projects/${project.slug}`} className={cls}>
+      <CardInner project={project} priority={priority} />
     </Link>
   );
 }

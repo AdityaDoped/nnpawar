@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { ArrowLeft, MapPin, Calendar, Tag } from "lucide-react";
+import { ArrowLeft, MapPin, Calendar, Tag, User, Layers, CheckCircle, Maximize2, Building2 } from "lucide-react";
 import { projects } from "@/data/projects";
 import ProjectGallery from "./ProjectGallery";
 
@@ -72,6 +72,52 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                 <p className="text-sm text-primary">{project.category}</p>
               </div>
             </div>
+            {project.client && (
+              <div className="flex items-start gap-3">
+                <User size={15} className="text-accent mt-0.5 shrink-0" />
+                <div>
+                  <p className="text-[9px] text-muted/50 tracking-widest uppercase mb-1">Client</p>
+                  <p className="text-sm text-primary">{project.client}</p>
+                </div>
+              </div>
+            )}
+            {project.type && (
+              <div className="flex items-start gap-3">
+                <Layers size={15} className="text-accent mt-0.5 shrink-0" />
+                <div>
+                  <p className="text-[9px] text-muted/50 tracking-widest uppercase mb-1">Project Type</p>
+                  <p className="text-sm text-primary">{project.type}</p>
+                </div>
+              </div>
+            )}
+            {project.status && (
+              <div className="flex items-start gap-3">
+                <CheckCircle size={15} className="text-accent mt-0.5 shrink-0" />
+                <div>
+                  <p className="text-[9px] text-muted/50 tracking-widest uppercase mb-1">Status</p>
+                  <p className="text-sm text-primary">{project.status}</p>
+                </div>
+              </div>
+            )}
+            {(project.plotArea || project.builtUpArea) && (
+              <div className="flex items-start gap-3">
+                <Maximize2 size={15} className="text-accent mt-0.5 shrink-0" />
+                <div>
+                  <p className="text-[9px] text-muted/50 tracking-widest uppercase mb-1">Area</p>
+                  {project.plotArea && <p className="text-sm text-primary">Plot: {project.plotArea}</p>}
+                  {project.builtUpArea && <p className="text-sm text-primary">Built-up: {project.builtUpArea}</p>}
+                </div>
+              </div>
+            )}
+            {project.configuration && (
+              <div className="flex items-start gap-3">
+                <Building2 size={15} className="text-accent mt-0.5 shrink-0" />
+                <div>
+                  <p className="text-[9px] text-muted/50 tracking-widest uppercase mb-1">Configuration</p>
+                  <p className="text-sm text-primary">{project.configuration}</p>
+                </div>
+              </div>
+            )}
           </div>
           <a href="https://wa.me/919422322195?text=Hello%2C%20I%20am%20interested%20in%20a%20similar%20project." target="_blank" rel="noopener noreferrer"
             className="text-[10px] tracking-widest uppercase bg-accent text-white px-5 py-3.5 text-center hover:bg-accent/80 transition-all duration-300 hover:scale-105">
