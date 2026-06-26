@@ -11,8 +11,8 @@ import RefreshRedirect from "@/components/RefreshRedirect";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", weight: ["300","400","500","600"] });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair", weight: ["400","500","600","700"] });
 
-// ⚠️ Update this when your custom domain is live
-const SITE_URL = "https://nnpawarassociates.com";
+// ⚠️ Update to your custom domain when it goes live (e.g. https://nnpawarassociates.com)
+const SITE_URL = "https://nnpawar.vercel.app";
 
 export const metadata: Metadata = {
   title: {

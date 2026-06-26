@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
-// ⚠️ Replace with your actual deployed domain
-const BASE_URL = "https://www.nnpawarassociates.com";
+// ⚠️ Update to your custom domain when it goes live (e.g. https://nnpawarassociates.com)
+const BASE_URL = "https://nnpawar.vercel.app";
 
 export default function robots(): MetadataRoute.Robots {
   return {
