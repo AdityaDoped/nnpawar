@@ -77,11 +77,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    // ⚠️ GOOGLE SEARCH CONSOLE VERIFICATION CODE GOES HERE
-    // After adding your site in Google Search Console, copy the code from
-    // the "HTML tag" option and paste ONLY the content value below.
-    // Example: google: "abc123xyz456",
-    google: "PASTE_YOUR_CODE_HERE",
+    google: "lJ4YO2aJWF__pUJFCuPf1xfGj_nB6QZ9e8_aWM0XG3w",
   },
 };
 
