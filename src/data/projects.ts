@@ -19,6 +19,84 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  // ── Ongoing Projects (appear first) ──────────────────────────────────────
+  {
+    id: 10,
+    slug: "vishwa-ajinkya",
+    title: "Vishwa Ajinkya",
+    category: "Residential",
+    location: "Manchar, Maharashtra",
+    year: 2025,
+    description:
+      "Vishwa Ajinkya is a contemporary residential development comprising two thoughtfully designed apartment towers that blend modern aesthetics with functional urban living. Defined by clean architectural lines, framed façade elements, and a refined material palette, the project establishes a strong visual identity while ensuring long-term durability and comfort. Spacious balconies, generous glazing, and efficient floor layouts maximize natural light, cross-ventilation, and resident well-being. The development incorporates landscaped open spaces and organized circulation systems to create a vibrant and community-oriented living environment. Designed to meet the aspirations of modern families, the project seamlessly balances architectural elegance, practicality, and contemporary lifestyle requirements. Currently under construction, it reflects a commitment to quality, innovation, and sustainable residential development.",
+    shortDesc: "Twin residential towers with retail frontage and community-oriented planning",
+    images: ["/images/final.jpeg"],
+    featured: true,
+    client: "Vishwa Builders",
+    plotArea: "1400 sq.m",
+    builtUpArea: "3136 sq.m",
+    configuration: "2 Residential Buildings + Commercial Shops",
+    type: "Residential Apartment Development",
+    status: "Ongoing",
+  },
+  {
+    id: 11,
+    slug: "vishwashri",
+    title: "VishwaShri",
+    category: "Residential",
+    location: "Manchar, Maharashtra",
+    year: 2025,
+    description:
+      "VishwaShri is a modern residential development designed to offer comfortable and efficient urban living within a thoughtfully planned community setting. The architectural expression is characterized by contemporary massing, elegant façade detailing, and carefully proportioned balconies that enhance both functionality and visual appeal. The project emphasizes natural illumination, ventilation, and spatial efficiency to create healthy and comfortable living environments for residents. Landscaped surroundings, organized parking facilities, and pedestrian-friendly spaces contribute to the overall quality of life within the development. With a focus on affordability, comfort, and architectural excellence, the project delivers a balanced residential experience tailored to modern lifestyles.",
+    shortDesc: "Modern residential complex with 28 flats and landscaped community spaces",
+    images: ["/images/p_no_2_resi.jpeg"],
+    featured: true,
+    client: "Vishwa Builders",
+    plotArea: "1200 sq.m",
+    builtUpArea: "2336 sq.m",
+    configuration: "28 Residential Flats",
+    type: "Residential Apartment Complex",
+    status: "Ongoing",
+  },
+  {
+    id: 12,
+    slug: "vishwa-amenity",
+    title: "Vishwa Community & Amenities Centre",
+    category: "Residential",
+    location: "Manchar, Maharashtra",
+    year: 2025,
+    description:
+      "Conceived as the social and recreational heart of the larger residential development, the Vishwa Community & Amenities Centre is designed to foster community engagement, wellness, and shared experiences. The building accommodates a range of lifestyle and recreational facilities within a contemporary architectural framework that prioritizes accessibility, flexibility, and user comfort. Its clean geometric form, efficient planning, and welcoming public spaces create an inviting destination for residents of all age groups. The design emphasizes connectivity between indoor and outdoor activity zones while maintaining a strong visual identity within the township. Thoughtfully integrated landscaping and open gathering spaces further enhance the project's community-focused character.",
+    shortDesc: "Recreational and community amenity building at the heart of the township",
+    images: ["/images/amenity.jpeg"],
+    featured: false,
+    client: "Vishwa Builders",
+    plotArea: "555 sq.m",
+    builtUpArea: "1922 sq.m",
+    type: "Amenity Building",
+    status: "Ongoing",
+  },
+  {
+    id: 13,
+    slug: "vishwa-urban-residences",
+    title: "Vishwa Urban Residences",
+    category: "Residential",
+    location: "Manchar, Maharashtra",
+    year: 2025,
+    description:
+      "Vishwa Urban Residences is a contemporary mid-rise apartment building designed to maximize residential comfort within a compact urban footprint. The architectural design employs a clean and modern aesthetic, featuring well-defined vertical elements, spacious balconies, and carefully articulated façade treatments that enhance both functionality and visual appeal. Efficient floor planning ensures optimal space utilization while promoting natural light and cross-ventilation throughout the apartments. The stilt-level parking arrangement improves site efficiency and preserves valuable open space for landscaping and circulation. Designed for modern urban families, the project balances practicality, aesthetics, and long-term value.",
+    shortDesc: "Mid-rise apartment building with bold orange accents and stilt parking",
+    images: ["/images/whatsapp_urban_1.jpeg", "/images/whatsapp_urban_2.jpeg"],
+    featured: true,
+    client: "Vishwa Builders",
+    plotArea: "400 sq.m",
+    builtUpArea: "1322 sq.m",
+    configuration: "18 Residential Flats",
+    type: "Mid-Rise Residential Apartment Building",
+    status: "Ongoing",
+  },
+
+  // ── Completed Projects ────────────────────────────────────────────────────
   {
     id: 1,
     slug: "vishwa-vihar",
@@ -100,7 +178,7 @@ export const projects: Project[] = [
     location: "Manchar, Maharashtra",
     year: 2022,
     description:
-      "This contemporary mixed-use commercial development is designed to create a dynamic urban destination that seamlessly integrates healthcare, retail, and professional spaces within a single architectural framework. The façade features a balanced composition of geometric forms, vertical screening elements, and modern material finishes, establishing a strong visual identity. Large commercial frontages at the ground level enhance visibility and accessibility, while the upper floors are thoughtfully planned to accommodate institutional or office functions with maximum efficiency. Expansive glazing and well-proportioned openings ensure abundant natural light and a comfortable indoor environment. The building's clean architectural expression reflects professionalism, functionality, and modern design sensibilities. Positioned as a prominent landmark, it offers a versatile and future-ready environment for business, healthcare, and community engagement.",
+      "This contemporary mixed-use commercial development is designed to create a dynamic urban destination that seamlessly integrates healthcare, retail, and professional spaces within a single architectural framework. The façade features a balanced composition of geometric forms, vertical screening elements, and modern material finishes, establishing a strong visual identity. Large commercial frontages at the ground level enhance visibility and accessibility, while the upper floors are thoughtfully planned to accommodate institutional or office functions with maximum efficiency. Expansive glazing and well-proportioned openings ensure abundant natural light and a comfortable indoor environment. The building's clean architectural expression reflects professionalism, functionality, and modern design sensibilities.",
     shortDesc: "Mixed-use commercial development integrating healthcare, retail and offices",
     images: ["/images/bungalow5.jpeg"],
     featured: true,
@@ -118,7 +196,7 @@ export const projects: Project[] = [
     location: "Bavdhan, Pune",
     year: 2023,
     description:
-      "This contemporary residential tower is thoughtfully designed to respond to its sloping terrain, creating a harmonious relationship between architecture and landscape. The façade combines exposed brick textures with sleek modern finishes, producing a warm yet sophisticated visual identity. Clean geometric volumes, recessed balconies, and expansive glazing contribute to a dynamic elevation while maximizing natural light and panoramic views. The stilt-level parking and efficient vertical circulation demonstrate a practical approach to urban residential planning. Rooftop recreational spaces and integrated greenery enhance the living experience, offering residents a connection to nature within a modern setting. The project embodies contemporary elegance, sustainability, and refined urban living.",
+      "This contemporary residential tower is thoughtfully designed to respond to its sloping terrain, creating a harmonious relationship between architecture and landscape. The façade combines exposed brick textures with sleek modern finishes, producing a warm yet sophisticated visual identity. Clean geometric volumes, recessed balconies, and expansive glazing contribute to a dynamic elevation while maximizing natural light and panoramic views. The stilt-level parking and efficient vertical circulation demonstrate a practical approach to urban residential planning. Rooftop recreational spaces and integrated greenery enhance the living experience, offering residents a connection to nature within a modern setting.",
     shortDesc: "Contemporary residential tower with brick facade and panoramic views",
     images: ["/images/cam01.jpeg"],
     featured: false,
