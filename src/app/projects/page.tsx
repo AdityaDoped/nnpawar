@@ -4,7 +4,7 @@ import ProjectsGrid from "./ProjectsGrid";
 import ProjectStats from "./ProjectStats";
 
 export const metadata: Metadata = {
-  title: "Projects | N.N. Pawar & Associates",
+  title: "Projects",
   description:
     "Explore our portfolio of residential bungalows, apartment townships, and commercial buildings across Pune and Maharashtra — designed and built by N.N. Pawar & Associates.",
   alternates: { canonical: "/projects" },

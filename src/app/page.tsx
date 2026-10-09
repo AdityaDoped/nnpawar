@@ -4,6 +4,8 @@ import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { projects } from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";
 import SectionHeading from "@/components/SectionHeading";
+import Reveal from "@/components/Reveal";
+import CountUpStat from "@/components/CountUpStat";
 
 const featuredProjects = projects.filter((p) => p.featured);
 const stats = [
@@ -17,8 +19,8 @@ export default function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative h-screen min-h-[600px] flex items-end">
-        <Image src="/images/vv9.jpeg" alt="Vishwa Vihar Township by N.N. Pawar &amp; Associates" fill priority className="object-cover" />
+      <section className="relative h-screen min-h-[600px] flex items-end overflow-hidden">
+        <Image src="/images/vv9.jpeg" alt="Vishwa Vihar Township by N.N. Pawar &amp; Associates" fill priority sizes="100vw" className="object-cover animate-ken-burns" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/20" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-20 w-full">
           <div className="max-w-2xl">
@@ -55,19 +57,16 @@ export default function HomePage() {
 
       {/* STATS */}
       <section className="bg-primary">
-        <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat) => (
-            <div key={stat.label} className="text-center">
-              <p className="font-serif text-3xl text-accent font-semibold">{stat.value}</p>
-              <p className="text-white/40 text-[10px] tracking-widest uppercase mt-1">{stat.label}</p>
-            </div>
+            <CountUpStat key={stat.label} value={stat.value} label={stat.label} />
           ))}
         </div>
       </section>
 
       {/* ABOUT INTRO — MORE HAND-WRITTEN CONTENT */}
       <section className="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
-        <div>
+        <Reveal>
           <SectionHeading label="Who We Are" title="Architecture with Purpose & Precision"
             subtitle="Founded by Narsing N. Pawar, our firm combines licensed engineering expertise with architectural artistry. Every structure we design is a balance of form, function, and lasting quality." />
           
@@ -101,9 +100,9 @@ export default function HomePage() {
           <Link href="/about" className="mt-10 inline-flex items-center gap-2 text-xs tracking-widest uppercase text-primary border-b border-primary pb-0.5 hover:text-accent hover:border-accent transition-colors">
             Learn More About Us <ArrowRight size={12} />
           </Link>
-        </div>
+        </Reveal>
         {/* SMALLER IMAGE GRID */}
-        <div className="grid grid-cols-2 gap-3 h-[380px]">
+        <Reveal delay={150} className="grid grid-cols-2 gap-3 h-[380px]">
           <div className="relative overflow-hidden rounded-sm">
             <Image src="/images/bungalow2.jpeg" alt="Modern Bungalow Design" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover hover:scale-105 transition-transform duration-700" />
           </div>
@@ -115,13 +114,13 @@ export default function HomePage() {
               <Image src="/images/bungalow3.jpeg" alt="Commercial Complex" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover hover:scale-105 transition-transform duration-700" />
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* DESIGN PHILOSOPHY — NEW HAND-WRITTEN SECTION */}
       <section className="bg-secondary py-20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center">
+          <Reveal className="max-w-3xl mx-auto text-center">
             <p className="text-accent text-[10px] tracking-[0.3em] uppercase mb-4">Our Philosophy</p>
             <h2 className="font-serif text-3xl md:text-4xl font-semibold text-primary leading-snug">
               We Don&apos;t Just Build Structures — We <span className="italic font-normal">Create Legacies</span>
@@ -160,7 +159,7 @@ export default function HomePage() {
                 <p className="text-muted text-[10px] tracking-widest uppercase mt-1">Project Delivery</p>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
@@ -175,7 +174,9 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {featuredProjects.map((project, i) => (
-              <ProjectCard key={project.id} project={project} priority={i < 2} />
+              <Reveal key={project.id} delay={(i % 2) * 120}>
+                <ProjectCard project={project} priority={i < 2} />
+              </Reveal>
             ))}
           </div>
         </div>
@@ -191,12 +192,15 @@ export default function HomePage() {
               { num: "01", title: "Licensed Engineering", desc: "As a certified licensed engineer, we ensure every structure meets statutory norms, safety codes, and municipal approval requirements — saving you time and legal hassle." },
               { num: "02", title: "End-to-End Delivery", desc: "From initial concept sketches and site analysis to construction supervision and final handover, we manage the complete project lifecycle with precision and personal care." },
               { num: "03", title: "25+ Years of Expertise", desc: "Decades of hands-on experience across residential bungalows, apartment townships, and commercial complexes throughout Pune and Maharashtra." },
-            ].map((item) => (
-              <div key={item.num} className="group p-8 border border-gray-100 hover:border-accent transition-colors duration-300 bg-white">
-                <p className="font-serif text-4xl text-accent/30 font-bold mb-4 group-hover:text-accent/50 transition-colors">{item.num}</p>
-                <h3 className="font-serif text-lg font-semibold text-primary mb-3">{item.title}</h3>
-                <p className="text-sm text-muted leading-relaxed">{item.desc}</p>
-              </div>
+            ].map((item, i) => (
+              <Reveal key={item.num} delay={i * 120} className="h-full">
+                <div className="group relative h-full p-8 border border-gray-100 hover:border-accent/40 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 bg-white">
+                  <span className="absolute top-0 left-0 h-0.5 w-12 bg-accent group-hover:w-full transition-all duration-500" />
+                  <p className="font-serif text-4xl text-accent/30 font-bold mb-4 group-hover:text-accent/60 transition-colors">{item.num}</p>
+                  <h3 className="font-serif text-lg font-semibold text-primary mb-3">{item.title}</h3>
+                  <p className="text-sm text-muted leading-relaxed">{item.desc}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -206,7 +210,7 @@ export default function HomePage() {
       <section className="relative py-28 overflow-hidden">
         <Image src="/images/cam01.jpeg" alt="Start your architectural project with N.N. Pawar &amp; Associates" fill sizes="100vw" className="object-cover" />
         <div className="absolute inset-0 bg-primary/75" />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+        <Reveal className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <p className="text-accent text-[10px] tracking-[0.3em] uppercase mb-4">Ready to Build?</p>
           <h2 className="font-serif text-4xl md:text-5xl text-white font-semibold max-w-2xl mx-auto leading-tight">
             Let&apos;s Create Something <span className="italic font-normal">Extraordinary</span>
@@ -223,7 +227,7 @@ export default function HomePage() {
               WhatsApp Us
             </a>
           </div>
-        </div>
+        </Reveal>
       </section>
     </>
   );

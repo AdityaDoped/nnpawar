@@ -54,7 +54,7 @@ export const projects: Project[] = [
     client: "Vishwa Builders",
     plotArea: "400 sq.m",
     builtUpArea: "1322 sq.m",
-    configuration: "18 Residential Flats",
+    configuration: "28 Residential Flats",
     type: "Residential Apartment Complex",
     status: "Ongoing",
   },

@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import CookieConsent from "@/components/CookieConsent";
 import FAQBot from "@/components/FAQBot";
-import RefreshRedirect from "@/components/RefreshRedirect";
+import FloatingContact from "@/components/FloatingContact";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", weight: ["300","400","500","600"] });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair", weight: ["400","500","600","700"] });
@@ -146,10 +146,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="font-sans bg-white text-primary antialiased">
         <GoogleAnalytics />
-        <RefreshRedirect />
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <FloatingContact />
         <FAQBot />
         <CookieConsent />
       </body>

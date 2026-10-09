@@ -84,7 +84,7 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
 
       {/* Panel */}
       <div
-        className="relative z-10 w-full md:max-w-4xl max-h-[92vh] overflow-y-auto bg-primary text-white animate-in slide-in-from-bottom-4 md:slide-in-from-bottom-0 md:fade-in duration-350 md:mx-4 rounded-t-2xl md:rounded-2xl"
+        className="relative z-10 w-full md:max-w-4xl max-h-[92vh] overflow-y-auto bg-primary text-white animate-in slide-in-from-bottom-full md:slide-in-from-bottom-0 md:fade-in md:zoom-in-95 duration-300 ease-out md:mx-4 rounded-t-2xl md:rounded-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Hero image */}

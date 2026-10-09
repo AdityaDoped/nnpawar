@@ -15,9 +15,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const project = projects.find((p) => p.slug === slug);
-  if (!project) return { title: "Project Not Found | N.N. Pawar & Associates" };
+  if (!project) return { title: "Project Not Found" };
   return {
-    title: `${project.title} | N.N. Pawar & Associates`,
+    title: project.title,
     description: project.description.slice(0, 155),
     alternates: { canonical: `/projects/${slug}` },
   };
@@ -45,11 +45,11 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
       </section>
 
       <section className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-12">
-        <div className="md:col-span-2 animate-in fade-in slide-in-from-left duration-500">
+        <div className="md:col-span-2 animate-in fade-in slide-in-from-left-8 duration-700">
           <h2 className="font-serif text-2xl font-semibold text-primary mb-5">About this Project</h2>
           <p className="text-muted text-sm leading-relaxed">{project.description}</p>
         </div>
-        <div className="flex flex-col gap-5 animate-in fade-in slide-in-from-right duration-500">
+        <div className="flex flex-col gap-5 animate-in fade-in slide-in-from-right-8 duration-700">
           <div className="bg-secondary p-6 flex flex-col gap-5 hover:shadow-lg transition-shadow duration-300">
             <div className="flex items-start gap-3">
               <MapPin size={15} className="text-accent mt-0.5 shrink-0" />

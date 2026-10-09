@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import animate from "tailwindcss-animate";
 
 const config: Config = {
   content: [
@@ -29,8 +30,13 @@ const config: Config = {
         "slide-up": "slideUp 0.8s ease-out forwards",
         "slide-up-delay": "slideUp 0.8s ease-out 0.2s forwards",
         "slide-up-delay2": "slideUp 0.8s ease-out 0.4s forwards",
+        "ken-burns": "kenBurns 20s ease-out forwards",
       },
       keyframes: {
+        kenBurns: {
+          "0%": { transform: "scale(1.12)" },
+          "100%": { transform: "scale(1)" },
+        },
         fadeIn: {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
@@ -42,7 +48,12 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  // Only apply hover styles on devices that can actually hover, so touch
+  // screens don't get stuck in a half-hovered state
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
+  plugins: [animate],
 };
 
 export default config;

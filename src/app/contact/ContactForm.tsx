@@ -79,28 +79,28 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="flex flex-col gap-5">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-          <label className="text-[9px] tracking-widest uppercase text-muted/60 mb-2 block">Your Name *</label>
+          <label className="text-[11px] tracking-widest uppercase text-primary/70 font-medium mb-2 block">Your Name *</label>
           <input type="text" name="name" required value={form.name} onChange={handleChange} placeholder="Full name"
-            className={`w-full border px-4 py-3 text-sm text-primary placeholder:text-muted/40 focus:outline-none transition-colors ${errors.name ? "border-red-500 focus:border-red-500" : "border-gray-200 focus:border-accent"}`} />
+            className={`w-full border px-4 py-3 text-base md:text-sm text-primary placeholder:text-muted/40 focus:outline-none transition-colors ${errors.name ? "border-red-500 focus:border-red-500" : "border-gray-200 focus:border-accent"}`} />
           {errors.name && <p className="text-xs text-red-500 mt-1 flex items-center gap-1"><AlertCircle size={12} /> {errors.name}</p>}
         </div>
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 delay-100">
-          <label className="text-[9px] tracking-widest uppercase text-muted/60 mb-2 block">Phone Number *</label>
+          <label className="text-[11px] tracking-widest uppercase text-primary/70 font-medium mb-2 block">Phone Number *</label>
           <input type="tel" name="phone" required value={form.phone} onChange={handleChange} placeholder="+91 XXXXX XXXXX"
-            className={`w-full border px-4 py-3 text-sm text-primary placeholder:text-muted/40 focus:outline-none transition-colors ${errors.phone ? "border-red-500 focus:border-red-500" : "border-gray-200 focus:border-accent"}`} />
+            className={`w-full border px-4 py-3 text-base md:text-sm text-primary placeholder:text-muted/40 focus:outline-none transition-colors ${errors.phone ? "border-red-500 focus:border-red-500" : "border-gray-200 focus:border-accent"}`} />
           {errors.phone && <p className="text-xs text-red-500 mt-1 flex items-center gap-1"><AlertCircle size={12} /> {errors.phone}</p>}
         </div>
       </div>
       <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 delay-200">
-        <label className="text-[9px] tracking-widest uppercase text-muted/60 mb-2 block">Email Address</label>
+        <label className="text-[11px] tracking-widest uppercase text-primary/70 font-medium mb-2 block">Email Address</label>
         <input type="email" name="email" value={form.email} onChange={handleChange} placeholder="your@email.com"
-          className={`w-full border px-4 py-3 text-sm text-primary placeholder:text-muted/40 focus:outline-none transition-colors ${errors.email ? "border-red-500 focus:border-red-500" : "border-gray-200 focus:border-accent"}`} />
+          className={`w-full border px-4 py-3 text-base md:text-sm text-primary placeholder:text-muted/40 focus:outline-none transition-colors ${errors.email ? "border-red-500 focus:border-red-500" : "border-gray-200 focus:border-accent"}`} />
         {errors.email && <p className="text-xs text-red-500 mt-1 flex items-center gap-1"><AlertCircle size={12} /> {errors.email}</p>}
       </div>
       <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 delay-300">
-        <label className="text-[9px] tracking-widest uppercase text-muted/60 mb-2 block">Project Type</label>
+        <label className="text-[11px] tracking-widest uppercase text-primary/70 font-medium mb-2 block">Project Type</label>
         <select name="projectType" value={form.projectType} onChange={handleChange}
-          className="w-full border border-gray-200 px-4 py-3 text-sm text-primary focus:outline-none focus:border-accent transition-colors bg-white">
+          className="w-full border border-gray-200 px-4 py-3 text-base md:text-sm text-primary focus:outline-none focus:border-accent transition-colors bg-white">
           <option value="">Select a type...</option>
           <option>Residential Bungalow</option>
           <option>Apartment / Township</option>
@@ -112,16 +112,16 @@ export default function ContactForm() {
         </select>
       </div>
       <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 delay-400">
-        <label className="text-[9px] tracking-widest uppercase text-muted/60 mb-2 block">Your Message *</label>
+        <label className="text-[11px] tracking-widest uppercase text-primary/70 font-medium mb-2 block">Your Message *</label>
         <textarea name="message" required value={form.message} onChange={handleChange} rows={5}
           placeholder="Tell us about your project, site location, and requirements..."
-          className={`w-full border px-4 py-3 text-sm text-primary placeholder:text-muted/40 focus:outline-none transition-colors resize-none ${errors.message ? "border-red-500 focus:border-red-500" : "border-gray-200 focus:border-accent"}`} />
+          className={`w-full border px-4 py-3 text-base md:text-sm text-primary placeholder:text-muted/40 focus:outline-none transition-colors resize-none ${errors.message ? "border-red-500 focus:border-red-500" : "border-gray-200 focus:border-accent"}`} />
         {errors.message && <p className="text-xs text-red-500 mt-1 flex items-center gap-1"><AlertCircle size={12} /> {errors.message}</p>}
       </div>
       <button type="submit" disabled={isLoading} className="inline-flex items-center justify-center gap-2 bg-primary text-white text-xs tracking-widest uppercase px-8 py-4 hover:bg-accent disabled:opacity-50 disabled:cursor-not-allowed transition-all animate-in fade-in slide-in-from-bottom-4 duration-500 delay-500">
         {isLoading ? "Sending..." : <><Send size={13} /> Send via WhatsApp</>}
       </button>
-      <p className="text-[10px] text-muted/50 text-center">Submitting opens WhatsApp with your message pre-filled.</p>
+      <p className="text-xs text-muted text-center">Submitting opens WhatsApp with your message pre-filled.</p>
     </form>
   );
 }

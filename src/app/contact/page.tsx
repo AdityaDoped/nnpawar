@@ -3,7 +3,7 @@ import { MapPin, Phone, Mail, Facebook } from "lucide-react";
 import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Us | N.N. Pawar & Associates",
+  title: "Contact Us",
   description: "Get in touch with N.N. Pawar & Associates — licensed architects and engineers in Pune. Reach out for a free consultation on your residential or commercial project.",
   alternates: { canonical: "/contact" },
 };
@@ -28,14 +28,14 @@ export default function ContactPage() {
             <div className="flex items-start gap-4">
               <div className="w-10 h-10 bg-secondary flex items-center justify-center shrink-0"><MapPin size={16} className="text-accent" /></div>
               <div>
-                <p className="text-[9px] text-muted/50 tracking-widest uppercase mb-1">Office Address</p>
+                <p className="text-[11px] text-muted tracking-widest uppercase mb-1">Office Address</p>
                 <p className="text-sm text-primary leading-relaxed">Amrapali, 988/1/2/3, Office No. 1+2,<br />Sadashiv Peth, Pune – 411 030,<br />Maharashtra, India</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
               <div className="w-10 h-10 bg-secondary flex items-center justify-center shrink-0"><Phone size={16} className="text-accent" /></div>
               <div>
-                <p className="text-[9px] text-muted/50 tracking-widest uppercase mb-1">Phone</p>
+                <p className="text-[11px] text-muted tracking-widest uppercase mb-1">Phone</p>
                 <a href="tel:+919422322195" className="text-sm text-primary hover:text-accent transition-colors block">+91 9422322195</a>
                 <a href="tel:+918788285434" className="text-sm text-primary hover:text-accent transition-colors block">+91 8788285434</a>
               </div>
@@ -43,7 +43,7 @@ export default function ContactPage() {
             <div className="flex items-start gap-4">
               <div className="w-10 h-10 bg-secondary flex items-center justify-center shrink-0"><Mail size={16} className="text-accent" /></div>
               <div>
-                <p className="text-[9px] text-muted/50 tracking-widest uppercase mb-1">Email</p>
+                <p className="text-[11px] text-muted tracking-widest uppercase mb-1">Email</p>
                 <a href="mailto:narsingpawar@yahoo.com" className="text-sm text-primary hover:text-accent transition-colors block">narsingpawar@yahoo.com</a>
                 <a href="mailto:narsingnpawar@gmail.com" className="text-sm text-primary hover:text-accent transition-colors block mt-0.5">narsingnpawar@gmail.com</a>
               </div>
@@ -51,7 +51,7 @@ export default function ContactPage() {
             <div className="flex items-start gap-4">
               <div className="w-10 h-10 bg-secondary flex items-center justify-center shrink-0"><Facebook size={16} className="text-accent" /></div>
               <div>
-                <p className="text-[9px] text-muted/50 tracking-widest uppercase mb-1">Facebook</p>
+                <p className="text-[11px] text-muted tracking-widest uppercase mb-1">Facebook</p>
                 <a href="https://www.facebook.com/narsing.pawar.12" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:text-accent transition-colors">N.N. Pawar &amp; Associates</a>
               </div>
             </div>

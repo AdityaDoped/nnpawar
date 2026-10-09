@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowRight, Shield, Eye, Cookie, Mail } from "lucide-react";
 
 export const metadata = {
-  title: "Privacy Policy | N.N. Pawar & Associates",
+  title: "Privacy Policy",
   description:
     "Privacy Policy for N.N. Pawar & Associates — how we handle your information on our architecture and consultancy website.",
 };
