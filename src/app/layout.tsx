@@ -11,7 +11,7 @@ import FloatingContact from "@/components/FloatingContact";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", weight: ["300","400","500","600"] });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair", weight: ["400","500","600","700"] });
 
-const SITE_URL = "https://nnpawarassociates.com";
+const SITE_URL = "https://www.nnpawarassociates.com";
 
 export const metadata: Metadata = {
   title: {
